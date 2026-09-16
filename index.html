@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Viral Sex Videos Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff}
+header{padding:18px 6%;background:#1b1b1b;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px;color:#ff4d6d}nav a{color:#ddd;text-decoration:none;margin-left:18px}
+.hero{padding:70px 6%;text-align:center;background:linear-gradient(135deg,#28111a,#111)}
+.hero h1{font-size:42px;margin:0 0 12px}.hero p{color:#ccc}
+.btn{display:inline-block;background:#ff4d6d;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
+main{padding:35px 6%}.section-title{margin-top:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#1d1d1d;border-radius:12px;overflow:hidden}.thumb{height:145px;background:#333;display:flex;align-items:center;justify-content:center;color:#aaa}
+.card div:last-child{padding:15px}.tag{color:#ff8da1;font-size:13px}
+footer{text-align:center;padding:30px;color:#888}
+#ageGate{position:fixed;inset:0;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;z-index:10}
+.modal{max-width:430px;margin:20px;text-align:center;background:#1d1d1d;padding:30px;border-radius:15px}
+.modal h2{margin-top:0}.modal p{color:#bbb;line-height:1.5}.actions{display:flex;gap:10px;justify-content:center}
+.no{background:#444}
+</style>
+</head>
+<body>
+<div id="ageGate">
+  <div class="modal">
+    <h2>🔞 Adults Only</h2>
+    <p>This website is intended for adults aged 18 or older.</p>
+    <div class="actions">
+      <button class="btn" onclick="enterSite()">I am 18+</button>
+      <button class="btn no" onclick="leaveSite()">Leave</button>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="logo">Viral Sex Videos Hub</div>
+  <nav><a href="#videos">Videos</a><a href="#photos">Photos</a><a href="#membership">Membership</a></nav>
+</header>
+
+<section class="hero">
+  <h1>Viral Sex Videos Hub</h1>
+  <p>Adults-only media hub — add your legally owned/licensed content here.</p>
+  <a class="btn" href="#videos">Browse Videos</a>
+</section>
+
+<main>
+<section id="videos">
+<h2 class="section-title">🎥 Videos</h2>
+<div class="grid">
+  <article class="card"><div class="thumb">VIDEO PLACEHOLDER</div><div><b>Video Title 01</b><br><span class="tag">18+ • Premium</span></div></article>
+  <article class="card"><div class="thumb">VIDEO PLACEHOLDER</div><div><b>Video Title 02</b><br><span class="tag">18+ • Premium</span></div></article>
+  <article class="card"><div class="thumb">VIDEO PLACEHOLDER</div><div><b>Video Title 03</b><br><span class="tag">18+ • Premium</span></div></article>
+</div>
+</section>
+
+<section id="photos">
+<h2 class="section-title">🖼️ Photos</h2>
+<div class="grid">
+  <article class="card"><div class="thumb">PHOTO PLACEHOLDER</div><div><b>Gallery 01</b></div></article>
+  <article class="card"><div class="thumb">PHOTO PLACEHOLDER</div><div><b>Gallery 02</b></div></article>
+  <article class="card"><div class="thumb">PHOTO PLACEHOLDER</div><div><b>Gallery 03</b></div></article>
+</div>
+</section>
+
+<section id="membership">
+<h2 class="section-title">💳 Membership</h2>
+<div class="card" style="padding:20px">
+  <h3>Premium Membership</h3>
+  <p>Connect your payment provider here for subscriptions.</p>
+  <button class="btn" onclick="alert('Payment gateway not connected yet.')">Join Premium</button>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Viral Sex Videos Hub • 18+ Adults Only</footer>
+
+<script>
+function enterSite(){localStorage.setItem("ageVerified","yes");document.getElementById("ageGate").style.display="none"}
+function leaveSite(){window.location.href="https://www.google.com"}
+if(localStorage.getItem("ageVerified")==="yes")document.getElementById("ageGate").style.display="none";
+</script>
+</body>
+</html>
